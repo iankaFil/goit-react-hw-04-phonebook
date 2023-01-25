@@ -1,17 +1,11 @@
-// import { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import css from './contactForm.module.css';
 import { useState } from 'react';
 
 const ContactForm = ({ onSubmit }) => {
-  // state = { name: '', number: '' };
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  // const handleChange = e => {
-  //   const { name, value } = e.currentTarget;
-  //   setName({ [name]: value });
-  // };
   const handleSubmit = e => {
     e.preventDefault();
     onSubmit({ name, number });
